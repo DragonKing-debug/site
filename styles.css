@@ -1,0 +1,627 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка сайта */
+header {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.logo p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Главная секция */
+.hero {
+    background: linear-gradient(rgba(106, 17, 203, 0.8), rgba(37, 117, 252, 0.8)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 5rem 0;
+    margin-bottom: 3rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid;
+}
+
+.btn.primary {
+    background-color: #fff;
+    color: #2575fc;
+    border-color: #fff;
+}
+
+.btn.primary:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn.secondary {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn.secondary:hover {
+    background-color: #fff;
+    color: #2575fc;
+}
+
+/* Секция возможностей */
+.features {
+    padding: 3rem 0;
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.feature-card p {
+    margin-bottom: 1.5rem;
+    color: #7f8c8d;
+}
+
+.read-more {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+
+.read-more:after {
+    content: "→";
+    margin-left: 5px;
+    transition: margin-left 0.3s ease;
+}
+
+.read-more:hover:after {
+    margin-left: 10px;
+}
+
+/* Подвал */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 0.5rem;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Стили для внутренних страниц */
+.page-header {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    padding: 4rem 0 3rem 0;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(37, 117, 252, 0.6);
+    border-radius: 0 0 20px 20px;
+    animation: fadeInDown 1s ease forwards;
+}
+
+.page-header::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    width: 120%;
+    height: 150%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15), transparent 70%);
+    transform: rotate(25deg);
+    animation: shine 3s infinite linear;
+    pointer-events: none;
+}
+
+.page-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.page-header p {
+    font-size: 1.3rem;
+    opacity: 0.85;
+    font-weight: 500;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin-top: 0;
+}
+
+/* Анимации */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shine {
+    0% {
+        transform: rotate(25deg) translateX(-100%);
+    }
+    100% {
+        transform: rotate(25deg) translateX(100%);
+    }
+}
+
+/* Секция приоритетных задач */
+.priority-tasks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.task-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 8px 20px rgba(37, 117, 252, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.task-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(37, 117, 252, 0.25);
+}
+
+.task-card h3 {
+    font-size: 1.5rem;
+    color: #2575fc;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.task-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+/* Улучшение футера */
+footer {
+    background-color: #1f2a3d;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 2.5rem 0;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+footer:hover {
+    background-color: #2575fc;
+    color: white;
+}
+
+/* Адаптивность карточек */
+@media (max-width: 600px) {
+    .priority-tasks {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Стили для таблиц на странице Наставничество */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #2575fc;
+    color: white;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.left-align {
+    text-align: left;
+    white-space: nowrap;
+}
+
+.checkbox-cell {
+    font-size: 1.2rem;
+    line-height: 1;
+    padding: 6px 10px;
+}
+
+.header-row td {
+    background-color: #6a11cb;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: left;
+    padding: 12px 15px;
+}
+
+.green-row {
+    background-color: #e6f0ff;
+}
+
+.red-row {
+    background-color: #ffe6e6;
+}
+
+/* Горизонтальная прокрутка для таблицы на узких экранах */
+.container > table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.page-content {
+    padding: 2rem 0;
+}
+
+.content-section {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.content-section h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+}
+
+/* Новые стили для состава кураторов HR */
+.team-cards-beautiful {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.team-card-beautiful {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem 1.8rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 6px solid transparent;
+}
+
+.team-card-beautiful:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.team-card-beautiful h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.team-card-beautiful p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+}
+
+.team-card-beautiful p strong {
+    color: #2c3e50;
+}
+
+/* Цвета по уровню */
+.level-1 {
+    border-left-color: #2575fc;
+}
+
+.level-2 {
+    border-left-color: #6a11cb;
+}
+
+.level-3 {
+    border-left-color: #2ecc71;
+}
+
+/* Адаптивность карточек */
+@media (max-width: 600px) {
+    .team-cards-beautiful {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Новые стили для страницы Мероприятия */
+.event-report {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.event-report-item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem 1.8rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 6px solid #2575fc;
+}
+
+.event-report-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.event-report-item p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+}
+
+.event-report-item p strong {
+    color: #2c3e50;
+}
+
+/* Новые стили для страницы Тренинги и лекции */
+.training-report {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.8rem;
+    margin-top: 1rem;
+}
+
+.training-report-item {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 8px solid #6a11cb;
+}
+
+.training-report-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+}
+
+.training-report-item p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.training-report-item p strong {
+    color: #2c3e50;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* Стили формы на странице Отчетность, похожие на гугл форму, адаптированные под стиль сайта */
+.custom-form {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(108, 99, 255, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.custom-form .form-group {
+    margin-bottom: 20px;
+}
+
+.custom-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.custom-form .required {
+    color: #d93025;
+    margin-left: 4px;
+}
+
+.custom-form input[type="text"],
+.custom-form input[type="number"],
+.custom-form input[type="url"],
+.custom-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.custom-form input[type="text"]:focus,
+.custom-form input[type="number"]:focus,
+.custom-form input[type="url"]:focus,
+.custom-form textarea:focus {
+    border-color: #6c63ff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+.custom-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.custom-form button.btn.primary {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    margin-top: 10px;
+}

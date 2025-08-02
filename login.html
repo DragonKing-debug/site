@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Вход на сайт - HR RMRP "Рублевка"</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .login-container {
+            background: rgba(0,0,0,0.3);
+            padding: 2rem 3rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            text-align: center;
+            width: 320px;
+        }
+        h1 {
+            margin-bottom: 1rem;
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 6px;
+            border: none;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 6px;
+            background-color: #2575fc;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #6a11cb;
+        }
+        .error-message {
+            color: #ff6b6b;
+            margin-top: 0.5rem;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Введите пароль</h1>
+        <input type="password" id="passwordInput" placeholder="Пароль" />
+        <button onclick="checkPassword()">Войти</button>
+        <div class="error-message" id="errorMessage">Неверный пароль. Попробуйте снова.</div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const input = document.getElementById('passwordInput').value;
+            const errorMessage = document.getElementById('errorMessage');
+            if (input === 'regedit') {
+                // Устанавливаем флаг успешного входа
+                sessionStorage.setItem('loggedIn', 'true');
+                // При правильном пароле перенаправляем на главную страницу
+                window.location.href = 'index.html';
+            } else {
+                errorMessage.style.display = 'block';
+            }
+        }
+
+        // Позволяет нажать Enter для отправки
+        document.getElementById('passwordInput').addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                checkPassword();
+            }
+        });
+    </script>
+</body>
+</html>

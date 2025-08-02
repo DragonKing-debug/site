@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Отчетность - HR RMRP "Рублевка"</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>HR RMRP "Рублевка"</h1>
+                <p>Профессиональные решения для управления персоналом</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="faq.html">FAQ HR</a></li>
+                    <li><a href="mentoring.html">Наставничество</a></li>
+                    <li><a href="priorities.html">Приоритетные задачи</a></li>
+                    <li><a href="team.html">Состав HR</a></li>
+                    <li><a href="events.html">Мероприятия</a></li>
+                    <li><a href="trainings.html">Тренинги и лекции</a></li>
+                    <li><a href="reports.html" class="active">Отчетность</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Отчетность и аналитика</h1>
+            <p>Ключевые показатели эффективности HR-департамента</p>
+        </div>
+    </section>
+
+    <main class="page-content">
+        <div class="container">
+            <div class="content-section">
+                <h2>Правила подачи отчета куратора HR:</h2>
+                <p>1. В общей папке отчета на google disk с еженедельной отчетность нужно создать отдельную папку с названием "HR";</p>
+                <p>2. В этой папке создаем подпапки с названиями "Помощь в приватах" и "Остальная работа";</p>
+                <p>3. Загрузить в соответствующие подпапки проделанную Вами за неделю работу</p>
+                <p>В случае повышения администратора, за которым Вы закреплены, на 2-ой уровень администратора, оплата за его повышение придет вместе с основной зарплатой в ближайшее воскресение после его повышения.</p>
+                <p>• Еженедельный отчет куратора HR подается каждое воскресение до 16:00 по московскому времени.</p>
+                <p>Кураторская зарплата приходит вместе с основной. НЕТ ОТЧЕТА = НЕТ ЗАРПЛАТЫ</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Форма подачи отчета</h2>
+                <form class="custom-form" action="#" method="post" novalidate>
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="game-nick">Игровой ник <span class="required">*</span></label>
+                            <input type="text" id="game-nick" name="game-nick" required />
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="game-id">Игровой ID <span class="required">*</span></label>
+                            <input type="text" id="game-id" name="game-id" required />
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="discord-help">Кол-во помощи в привате Discord <span class="required">*</span></label>
+                            <input type="number" id="discord-help" name="discord-help" min="0" required />
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="priority-tasks">Кол-во выполненных приоритетных задач <span class="required">*</span></label>
+                            <input type="number" id="priority-tasks" name="priority-tasks" min="0" required />
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="events-count">Кол-во проведенных мероприятий <span class="required">*</span></label>
+                            <input type="number" id="events-count" name="events-count" min="0" required />
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="trainings-count">Кол-во проведенных тренингов <span class="required">*</span></label>
+                            <input type="number" id="trainings-count" name="trainings-count" min="0" required />
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="proposals-count">Кол-во реализованных Вами предложений <span class="required">*</span></label>
+                            <input type="number" id="proposals-count" name="proposals-count" min="0" required />
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="admins-trained">Кол-во обученных администраторов <span class="required">*</span></label>
+                            <input type="number" id="admins-trained" name="admins-trained" min="0" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="other-work">Остальная работа, которую Вы выполнили за неделю</label>
+                        <textarea id="other-work" name="other-work" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="report-folder">Ссылка на папку с отчетом <span class="required">*</span></label>
+                        <input type="url" id="report-folder" name="report-folder" required />
+                    </div>
+
+                    <button type="submit" class="btn primary">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 HR RMRP "Рублевка". Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
